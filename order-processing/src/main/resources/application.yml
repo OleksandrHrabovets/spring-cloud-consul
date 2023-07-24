@@ -1,0 +1,12 @@
+spring:
+  config:
+    import: 'consul:'
+  application:
+    name: order-processing
+  cloud:
+    consul:
+      port: 8500
+      host: localhost
+  sql:
+    init:
+      mode: always
