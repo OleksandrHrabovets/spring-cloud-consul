@@ -7,6 +7,8 @@ spring:
     consul:
       port: 8500
       host: localhost
+      discovery:
+        instance-id: order-processing
   sql:
     init:
-      mode: always
+      mode: never

@@ -1,0 +1,18 @@
+1. Install Consul (https://www.consul.io/)
+2. Run Consul agent (consul agent -server -bind=your_ip_adress -ui -data-dir=consul_data -bootstrap)
+3. Add in Consul UI (localhost:8500)
+Key / Value:
+  /config
+    /catalogue
+       spring.datasource.url
+       spring.datasource.username
+       spring.datasource.password
+    /order-processing,default
+       spring.datasource.url
+       spring.datasource.username
+       spring.datasource.password
+4. Run catalogue application
+5. Run order-processing application
+6. Test REST Api:
+  http://localhost:8080/api/order-processing/orders
+  http://localhost:51505/api/catalogue/products

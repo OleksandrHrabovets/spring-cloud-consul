@@ -1,8 +1,10 @@
 spring:
   application:
     name: catalogue
+  config:
+    import: 'consul:'
   sql:
     init:
-      mode: always
+      mode: never
 server:
   port: 0

@@ -32,8 +32,8 @@ public class OrdersRestController implements RowMapper<OrdersRestController.Orde
   public OrderItem mapRow(ResultSet rs, int rowNum) throws SQLException {
     int productId = rs.getInt("id_product");
     Product product = this.restTemplate.getForObject(
-        "http://selpo-cat/api/catalogue/products/" + productId, Product.class);
-    return new OrderItem(rs.getInt("id"), rs.getInt("c_amount"),
+        "http://catalogue/api/catalogue/products/" + productId, Product.class);
+    return new OrderItem(rs.getInt("id"), rs.getInt("amount"),
         product);
   }
 
